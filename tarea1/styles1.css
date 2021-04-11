@@ -4,14 +4,22 @@
 
 }
 
+/* Estos son los colores que usé para el texto, no es necesario 
+que lo hagas, hay formas más faciles pero es una buena practica
+que guardes tu paleta de colores en vez de ingresar el valor hex */
+
 html {
     font-size: 62.5%;
     box-sizing: border-box;
 }
 
+/* Esto hace que en todo el html tengas el tamaño de letra más pequeño, lo pongo asi porque utilizo el rem como unidad de medida
+pero puedes utilizar pixeles sin hacer esto, box-sizing tambien es opcional, sirve para que cuando agregues padding o margin, no se modifique el tamaño original */
+
 *, *:before, *:after {
     box-sizing: inherit;
 }
+/* esto es lo mismo */
 
 /*Globales*/
 
@@ -20,25 +28,26 @@ body {
     line-height: 1.5;
     font-family: 'Roboto', sans-serif;
 }
-
+/* aqui establezco el tamaño del texto, el espacio que hay entre linea y linea de texto y la tipografia, como Sans, comic Sans, Purita etc */
 p{
     font-size: 1.8rem;
 }
-
+/* establezco un tamaño para los parrafos */
 a{
     text-decoration: none;
 }
-
+/* Con text-decoration elijo ponerle un subrayado, negrita y cosas asi, o quitarlo, en este caso le quito el subrayado a los enlaces con "none" */
 img {
     max-width: 100%;
 
 }
-
+/* Esto hace que las imagenes tomen el tamaño que deberian ocupar, y se vean bien */
 .contenedor {
     max-width: 120rem;
 	width: 90%;
     margin: 0 auto;
 }
+/* esta clase es la que contiene todo el texto en vez de expandirse en todo lo largo de la pagina, le pongo un maximo para que tampoco sea tan grande, le pongo 90% para que no ocupe todo el espacio, si ocupara todo el espacio no contendria nada y seguiria a lo largo de toda la pagina */
 
 .ubicacion{
     font-family: 'Kiwi Maru', serif;
@@ -46,9 +55,23 @@ img {
     gap: 1rem;
     align-items: center;
     justify-content: center;
+}
+/* esta clase modifica lo que dice Cusco,Peru, le puse tipografia diferente, y display flex, que basicamente pone una cosa al lado de otra, y gap que pone un espacio entre el dibujo y el texto, basicamente align items y justify content ubica todo en el centro en el eje x y eje y */
+.ubicacion a{
+    color: var(--blanco);
+    font-size: 2rem;
     
 }
-
+/* Con esto modifico sólo el enlace que se ubica en lo de la ubicacion, que lleva al mapa */
+.ubicacion a:visited{
+    color: var(--blanco);
+}
+/* la propiedad :visited permite modificar como se va a ver el enlace una vez este visitado, el default o por defecto es morado, pero ahi lo puse blanco, tambien se puede poner color: #ffffff y ya */
+.ubicacion a:hover{
+    font-size: 2.7rem;
+    transition: 0.3s;
+}
+/* la propiedad o atributo :hover indica como se vera el enlace cuando el cursor esté encima, en este caso aumenté el tamaño  */
 @media (min-width: 768px) {
     header h1{
         font-size: 4rem;
@@ -58,6 +81,7 @@ img {
     }
     
 }
+/* @media sirve para modificar valores y hacerlo adaptable, en este caso solo cambie los tamaños del texto */
 @media (max-width: 767px) {
     header{
     padding: 0;
@@ -65,6 +89,8 @@ img {
     justify-content: center;
     }
 }
+/* Aqui tambien cambie los valores, el padding y el display de los elementos */
+
 header {
     background-image: url(./img/7\ colores.jpeg);
     background-color:  rgba(89, 89, 89, 50%);
@@ -74,13 +100,15 @@ header {
     background-blend-mode: darken;
     padding-top: 15rem;
     padding-bottom: 15rem;
-    margin-bottom: 3rem;
+    margin-bottom: 3rem; 
     color: var(--blanco);
     display: flex;
     justify-content: center;
+    size: 490rem 40rem;
 }
 
-
+/* Aqui esta la imagen de fondo oscurecida, primero que nada coloque la imagen con ese url, luego la oscureci con esos valores rgba, luego por defecto las imagenes de fondo se repiten si no ocupan todo el espacio y para arreglarlo se pone no repeat, luego muevo la imagen al centro y para ajustar el tamaño le pongo padding y margin
+Color blanco para el texto, display flex para acomodar elementos y la ultima linea esta de mas, no era necesaria */
 
 @media (min-width: 769px) {
     .info {
@@ -98,6 +126,7 @@ header {
 .seccion__texto h2:first-of-type{
     margin-top: 0;
 }
+/* :first-of-type sirve para seleccionar solo el primero si tenemos varios elementos iguales */
 .seccion__texto p{
     margin-top: 0.2rem;
 }
@@ -110,6 +139,7 @@ footer{
     background-color: var(--negro);
     color: var(--blanco);
 }
+/* El footer es la parte de abajo donde se suelen poner los enlaces y asi, el color de fondo es negro y el de las letras es blanco */
 @media (min-width:500px ) {
     .footer{
     display: grid;
@@ -117,7 +147,7 @@ footer{
     padding: 2rem 0;
     }
 }
-
+/* Con display grid lo coloco todo como en una tabla y sirve para acomodar elementos, aveces es mas facil que display flex */
 @media (min-width: 500px) {
     .yo{
         display: flex;
@@ -127,6 +157,7 @@ footer{
     }
     
 }
+/* yo es la foto mia que puse abajo, aqui al cambiar los valores lo puse al costado */
 .yo img{
     max-width: 20rem;
   
@@ -145,12 +176,14 @@ footer{
     font-family: 'Caveat', cursive;
     font-weight: 400;
 }
+/* El h2 de .yo es el texto que dice mi nombre, le cambie la tipografia, aumente el tamaño a 50px o 5rem, y el font-weight es si es negrita, normal o mas light, en este caso 400 es normal */
 
 @media (max-width: 500px) {
     nav {
     padding-bottom: 5rem;
     }
 }
+
 nav{
     display: flex;
     align-items: center;
@@ -158,17 +191,22 @@ nav{
     font-size: 3rem;
     color: var(--blanco);
 }
+
 nav a:visited{
     color: var(--blanco);
 }
+/* Aqui modifico el visited como ya explique y le puse blanco */
 nav a:hover{
     color: darkmagenta;
 }
+/* En el hover le puse este color morado para cuando pase el cursor, este nav es la navegacion de los links que puse, mi repositorio y mi instagram */
 .social {
     display: flex;
 align-items: center;
 }
+
 .social:first-of-type{
     margin-bottom: 2rem;
 }
 
+/* Para terminar, Agarre el first of type de .social, esas son mis redes sociales y le puse margen abajo para que no esten tan juntas */
