@@ -92,7 +92,7 @@ img {
 /* Aqui tambien cambie los valores, el padding y el display de los elementos */
 
 header {
-    background-image: url(./img/7\ colores.jpeg);
+    background-image: url(/src/img/7\ colores.jpeg);
     background-color:  rgba(89, 89, 89, 50%);
     background-repeat: no-repeat;
     background-size: cover;
