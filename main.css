@@ -29,6 +29,7 @@ body {
     font-size: 16px; /*1rem = 10px*/
     line-height: 1.5;
     font-family: 'Roboto', sans-serif;
+    margin: 0;
 }
 /* aqui establezco el tamaño del texto, el espacio que hay entre linea y linea de texto y la tipografia, como Sans, comic Sans, Purita etc */
 p{
