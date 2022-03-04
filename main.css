@@ -11,6 +11,8 @@ que guardes tu paleta de colores en vez de ingresar el valor hex */
 html {
     font-size: 62.5%;
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 /* Esto hace que en todo el html tengas el tamaño de letra más pequeño, lo pongo asi porque utilizo el rem como unidad de medida
@@ -27,6 +29,7 @@ body {
     font-size: 16px; /*1rem = 10px*/
     line-height: 1.5;
     font-family: 'Roboto', sans-serif;
+    margin: 0;
 }
 /* aqui establezco el tamaño del texto, el espacio que hay entre linea y linea de texto y la tipografia, como Sans, comic Sans, Purita etc */
 p{
@@ -92,7 +95,7 @@ img {
 /* Aqui tambien cambie los valores, el padding y el display de los elementos */
 
 header {
-    background-image: url(./img/7\ colores.jpeg);
+    background-image: url(src/img/7colores.jpeg);
     background-color:  rgba(89, 89, 89, 50%);
     background-repeat: no-repeat;
     background-size: cover;
